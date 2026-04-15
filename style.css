@@ -11,7 +11,7 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     color: #222;
-    background: #fff;
+    background: #ececec;
     overflow-x: hidden;
 }
 
@@ -76,7 +76,7 @@ body {
 /* ── Features Section ── */
 .features {
     padding: 80px 20px;
-    background: #fff;
+    background: #ececec;
 }
 
 .features-grid {
@@ -121,7 +121,7 @@ body {
 /* ── Gallery / Carousel ── */
 .gallery {
     padding: 0 0 60px;
-    background: #fff;
+    background: #ececec;
 }
 
 .carousel {
@@ -147,6 +147,7 @@ body {
     height: 500px;
     object-fit: cover;
     display: block;
+    cursor: zoom-in;
 }
 
 .carousel-btn {
@@ -210,10 +211,120 @@ body {
     background: #222;
 }
 
+/* ── Lightbox Modal ── */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    animation: fadeIn 0.2s ease-out;
+    cursor: zoom-out;
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    cursor: default;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease-in-out;
+    color: #fff;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-close svg {
+    width: 22px;
+    height: 22px;
+}
+
+.lightbox-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease-in-out;
+    color: #fff;
+    z-index: 1;
+}
+
+.lightbox-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+.lightbox-btn-prev {
+    left: 20px;
+}
+
+.lightbox-btn-next {
+    right: 20px;
+}
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .lightbox {
+        padding: 10px;
+    }
+
+    .lightbox-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .lightbox-btn-prev {
+        left: 8px;
+    }
+
+    .lightbox-btn-next {
+        right: 8px;
+    }
+}
+
 /* ── Social Section ── */
 .social {
     padding: 40px 20px 60px;
-    background: #fff;
+    background: #ececec;
 }
 
 .social-buttons {

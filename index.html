@@ -10,6 +10,14 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#222222">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="./assets/favicon.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="./assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="./assets/favicon.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon.jpg">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="./assets/favicon.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="./assets/favicon.jpg">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="YAN Furniture — Կահույք՝ ստեղծված սիրով և ոճով">
@@ -124,21 +132,7 @@
         <h2 class="sr-only">Կահույքի պատկերասրահ</h2>
         <div class="carousel" role="region" aria-roledescription="carousel">
             <div class="carousel-track">
-                <div class="carousel-slide active" role="group" aria-roledescription="slide" aria-label="1 / 5">
-                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&q=80" alt="Մոդեռն բազմոց — YAN Furniture" loading="lazy" width="1200" height="800">
-                </div>
-                <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 / 5">
-                    <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=1200&q=80" alt="Խոհանոցային կահույք — YAN Furniture" loading="lazy" width="1200" height="800">
-                </div>
-                <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 / 5">
-                    <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=1200&q=80" alt="Հյուրասենյակի ինտերիեր — YAN Furniture" loading="lazy" width="1200" height="800">
-                </div>
-                <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 / 5">
-                    <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=1200&q=80" alt="Աշխատանքային կահույք — YAN Furniture" loading="lazy" width="1200" height="800">
-                </div>
-                <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="5 / 5">
-                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&q=80" alt="Ննջարանոցի դիզայն — YAN Furniture" loading="lazy" width="1200" height="800">
-                </div>
+                <!-- Slides loaded dynamically from images.json -->
             </div>
             <button class="carousel-btn carousel-btn-prev" aria-label="Նախորդը">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -151,11 +145,7 @@
                 </svg>
             </button>
             <div class="carousel-dots" role="tablist" aria-label="Սլայդներ">
-                <button class="dot active" role="tab" aria-selected="true" aria-label="Սլայդ 1" data-index="0"></button>
-                <button class="dot" role="tab" aria-selected="false" aria-label="Սլայդ 2" data-index="1"></button>
-                <button class="dot" role="tab" aria-selected="false" aria-label="Սլայդ 3" data-index="2"></button>
-                <button class="dot" role="tab" aria-selected="false" aria-label="Սլայդ 4" data-index="3"></button>
-                <button class="dot" role="tab" aria-selected="false" aria-label="Սլայդ 5" data-index="4"></button>
+                <!-- Dots loaded dynamically -->
             </div>
         </div>
     </section>
@@ -184,6 +174,26 @@
             </a>
         </nav>
     </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Պատկերի դիտում" hidden>
+        <button class="lightbox-close" aria-label="Փակել">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 6l12 12M6 18L18 6"/>
+            </svg>
+        </button>
+        <button class="lightbox-btn lightbox-btn-prev" aria-label="Նախորդը">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 19l-7-7 7-7"/>
+            </svg>
+        </button>
+        <img class="lightbox-img" src="" alt="">
+        <button class="lightbox-btn lightbox-btn-next" aria-label="Հաջորդը">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 5l7 7-7 7"/>
+            </svg>
+        </button>
+    </div>
 
     <script src="script.js"></script>
 </body>
